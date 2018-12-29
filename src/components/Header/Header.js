@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
 import routes from '../../routing/routes'
-import Menu from '../Menu/Menu'
+import Menu from '../Menu'
 import logo from '../../assets/jinlabs_logo.png'
 
 const Container = styled.header`
@@ -14,11 +14,12 @@ const Container = styled.header`
   overflow: hidden;
   height: 70px;
   width: 100%;
-  position: absolute;
-  margin-top: 10px;
+  position: sticky;
+  margin: 10px 0;
   border: 2px solid ${props => props.theme.color.yellow};
-  top: 0;
+  top: 10px;
   background: white;
+  box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.2);
 `
 
 const LogoLink = styled(Link)`

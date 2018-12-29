@@ -1,5 +1,5 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Link } from '@reach/router'
 import styled from 'styled-components'
 import routes from '../../routing/routes'
@@ -17,22 +17,23 @@ const LinkMenu = styled(Link)`
   padding: 10px;
   margin: 5px;
 `
-function Menu(props) {
-  return (
-    <List>
-      <li>
-        <LinkMenu to={routes.root}> Home </LinkMenu>
-      </li>
-      <li>
-        <LinkMenu to={routes.skills}> Skills </LinkMenu>
-      </li>
-      <li>
-        <LinkMenu to={routes.work}> Work </LinkMenu>
-      </li>
-    </List>
-  )
-}
+const Menu = ({ toggleMenu }) => (
+  <List>
+    <li>
+      <LinkMenu to={routes.root}> Home </LinkMenu>
+    </li>
+    <li>
+      <LinkMenu to={routes.skills}> Skills </LinkMenu>
+    </li>
+    <li>
+      <LinkMenu to={routes.work}> Work </LinkMenu>
+    </li>
+    <li onClick={toggleMenu}>Toggle</li>
+  </List>
+)
 
-// Menu.propTypes = {}
+Menu.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
+}
 
 export default Menu

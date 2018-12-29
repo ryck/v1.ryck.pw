@@ -3,17 +3,19 @@ import React from 'react'
 import styled from 'styled-components'
 import Router from '../routing/Router'
 import Header from './Header/Header'
+import Wrapper from '../styles/Container'
 
 const Container = styled.div`
-  padding-top: 94px;
   position: relative;
 `
 
 const Layout = () => (
   <Container>
-    <Header />
-    <Router />
-    <footer>Footer</footer>
+    <Wrapper>
+      <Header />
+      <Router />
+      <footer>Footer</footer>
+    </Wrapper>
   </Container>
 )
 
