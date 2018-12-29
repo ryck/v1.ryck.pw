@@ -4,6 +4,10 @@ import PropTypes from 'prop-types'
 import theme from '../styles/theme'
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: ${props => props.theme.color.yellow};
+    background: ${props => props.theme.color.lightyellow};
   }
 
   code {
